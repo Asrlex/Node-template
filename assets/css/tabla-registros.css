@@ -1,0 +1,206 @@
+.hover-button {
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgb(214, 214, 231) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: rgb(144, 134, 224);
+  cursor: pointer;
+  display: inline-flex;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+}
+.hover-button:hover, .hover-button:focus, .hover-button:focus:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgb(214, 214, 231) 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+.hover-button:focus {
+  outline: none;
+}
+.hover-button:active {
+  box-shadow: rgb(214, 214, 231) 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.tableParam, .tableCuadre, .previewTable, .tablaUser, .tableContable, .tableContableFiltrada, .tablaGrande, .tablaClientes {
+  overflow: auto;
+  max-height: 160px;
+  margin: 0px 0px;
+  padding: 0px 0px;
+  margin-bottom: 10px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.tableParam::-webkit-scrollbar, .tableCuadre::-webkit-scrollbar, .previewTable::-webkit-scrollbar, .tablaUser::-webkit-scrollbar, .tableContable::-webkit-scrollbar, .tableContableFiltrada::-webkit-scrollbar, .tablaGrande::-webkit-scrollbar, .tablaClientes::-webkit-scrollbar {
+  width: 10px;
+  height: 18px;
+}
+.tableParam::-webkit-scrollbar-thumb, .tableCuadre::-webkit-scrollbar-thumb, .previewTable::-webkit-scrollbar-thumb, .tablaUser::-webkit-scrollbar-thumb, .tableContable::-webkit-scrollbar-thumb, .tableContableFiltrada::-webkit-scrollbar-thumb, .tablaGrande::-webkit-scrollbar-thumb, .tablaClientes::-webkit-scrollbar-thumb {
+  height: 3px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background-clip: padding-box;
+  background-color: #0064a6;
+}
+.tableParam::-webkit-scrollbar-thumb:hover, .tableCuadre::-webkit-scrollbar-thumb:hover, .previewTable::-webkit-scrollbar-thumb:hover, .tablaUser::-webkit-scrollbar-thumb:hover, .tableContable::-webkit-scrollbar-thumb:hover, .tableContableFiltrada::-webkit-scrollbar-thumb:hover, .tablaGrande::-webkit-scrollbar-thumb:hover, .tablaClientes::-webkit-scrollbar-thumb:hover {
+  background-color: #0083d9;
+}
+.tableParam::-webkit-scrollbar-button, .tableCuadre::-webkit-scrollbar-button, .previewTable::-webkit-scrollbar-button, .tablaUser::-webkit-scrollbar-button, .tableContable::-webkit-scrollbar-button, .tableContableFiltrada::-webkit-scrollbar-button, .tablaGrande::-webkit-scrollbar-button, .tablaClientes::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+  display: none;
+}
+.tableParam::-webkit-scrollbar-corner, .tableCuadre::-webkit-scrollbar-corner, .previewTable::-webkit-scrollbar-corner, .tablaUser::-webkit-scrollbar-corner, .tableContable::-webkit-scrollbar-corner, .tableContableFiltrada::-webkit-scrollbar-corner, .tablaGrande::-webkit-scrollbar-corner, .tablaClientes::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+.tableParam #styled-table, .tableCuadre #styled-table, .previewTable #styled-table, .tablaUser #styled-table, .tableContable #styled-table, .tableContableFiltrada #styled-table, .tablaGrande #styled-table, .tablaClientes #styled-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 20px;
+}
+.tableParam #styled-table thead tr, .tableCuadre #styled-table thead tr, .previewTable #styled-table thead tr, .tablaUser #styled-table thead tr, .tableContable #styled-table thead tr, .tableContableFiltrada #styled-table thead tr, .tablaGrande #styled-table thead tr, .tablaClientes #styled-table thead tr {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  border-collapse: collapse;
+  background-color: #00558C;
+  color: #ffffff;
+  font-size: 13px;
+  box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.75);
+}
+.tableParam #styled-table thead tr th, .tableCuadre #styled-table thead tr th, .previewTable #styled-table thead tr th, .tablaUser #styled-table thead tr th, .tableContable #styled-table thead tr th, .tableContableFiltrada #styled-table thead tr th, .tablaGrande #styled-table thead tr th, .tablaClientes #styled-table thead tr th {
+  cursor: pointer;
+}
+.tableParam #styled-table thead tr th:nth-of-type(1), .tableCuadre #styled-table thead tr th:nth-of-type(1), .previewTable #styled-table thead tr th:nth-of-type(1), .tablaUser #styled-table thead tr th:nth-of-type(1), .tableContable #styled-table thead tr th:nth-of-type(1), .tableContableFiltrada #styled-table thead tr th:nth-of-type(1), .tablaGrande #styled-table thead tr th:nth-of-type(1), .tablaClientes #styled-table thead tr th:nth-of-type(1) {
+  border-radius: 8px 0 0 0;
+}
+.tableParam #styled-table thead tr th:nth-last-of-type(1), .tableCuadre #styled-table thead tr th:nth-last-of-type(1), .previewTable #styled-table thead tr th:nth-last-of-type(1), .tablaUser #styled-table thead tr th:nth-last-of-type(1), .tableContable #styled-table thead tr th:nth-last-of-type(1), .tableContableFiltrada #styled-table thead tr th:nth-last-of-type(1), .tablaGrande #styled-table thead tr th:nth-last-of-type(1), .tablaClientes #styled-table thead tr th:nth-last-of-type(1) {
+  border-radius: 0 8px 0 0;
+}
+.tableParam #styled-table th, .tableCuadre #styled-table th, .previewTable #styled-table th, .tablaUser #styled-table th, .tableContable #styled-table th, .tableContableFiltrada #styled-table th, .tablaGrande #styled-table th, .tablaClientes #styled-table th,
+.tableParam #styled-table td,
+.tableCuadre #styled-table td,
+.previewTable #styled-table td,
+.tablaUser #styled-table td,
+.tableContable #styled-table td,
+.tableContableFiltrada #styled-table td,
+.tablaGrande #styled-table td,
+.tablaClientes #styled-table td {
+  padding: 5px 5px;
+  text-align: center;
+}
+.tableParam #styled-table a, .tableCuadre #styled-table a, .previewTable #styled-table a, .tablaUser #styled-table a, .tableContable #styled-table a, .tableContableFiltrada #styled-table a, .tablaGrande #styled-table a, .tablaClientes #styled-table a {
+  margin: -15px 0;
+  padding: 0;
+}
+.tableParam #styled-table tbody, .tableCuadre #styled-table tbody, .previewTable #styled-table tbody, .tablaUser #styled-table tbody, .tableContable #styled-table tbody, .tableContableFiltrada #styled-table tbody, .tablaGrande #styled-table tbody, .tablaClientes #styled-table tbody {
+  background-color: #ffffff;
+  font-size: 11px;
+}
+.tableParam #styled-table tbody tr, .tableCuadre #styled-table tbody tr, .previewTable #styled-table tbody tr, .tablaUser #styled-table tbody tr, .tableContable #styled-table tbody tr, .tableContableFiltrada #styled-table tbody tr, .tablaGrande #styled-table tbody tr, .tablaClientes #styled-table tbody tr {
+  height: 20px;
+  line-height: 20px;
+}
+.tableParam #styled-table tbody tr:nth-of-type(even), .tableCuadre #styled-table tbody tr:nth-of-type(even), .previewTable #styled-table tbody tr:nth-of-type(even), .tablaUser #styled-table tbody tr:nth-of-type(even), .tableContable #styled-table tbody tr:nth-of-type(even), .tableContableFiltrada #styled-table tbody tr:nth-of-type(even), .tablaGrande #styled-table tbody tr:nth-of-type(even), .tablaClientes #styled-table tbody tr:nth-of-type(even) {
+  background-color: #e6e6e6;
+}
+.tableParam #styled-table tbody tr:last-of-type, .tableCuadre #styled-table tbody tr:last-of-type, .previewTable #styled-table tbody tr:last-of-type, .tablaUser #styled-table tbody tr:last-of-type, .tableContable #styled-table tbody tr:last-of-type, .tableContableFiltrada #styled-table tbody tr:last-of-type, .tablaGrande #styled-table tbody tr:last-of-type, .tablaClientes #styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #00558C;
+}
+.tableParam #styled-table tbody tr.active-row, .tableCuadre #styled-table tbody tr.active-row, .previewTable #styled-table tbody tr.active-row, .tablaUser #styled-table tbody tr.active-row, .tableContable #styled-table tbody tr.active-row, .tableContableFiltrada #styled-table tbody tr.active-row, .tablaGrande #styled-table tbody tr.active-row, .tablaClientes #styled-table tbody tr.active-row {
+  font-weight: bold;
+  color: #00558C;
+}
+.tableParam #styled-table tbody tr:hover, .tableCuadre #styled-table tbody tr:hover, .previewTable #styled-table tbody tr:hover, .tablaUser #styled-table tbody tr:hover, .tableContable #styled-table tbody tr:hover, .tableContableFiltrada #styled-table tbody tr:hover, .tablaGrande #styled-table tbody tr:hover, .tablaClientes #styled-table tbody tr:hover {
+  background-color: #029cff;
+  cursor: default;
+  transition: 0.2s;
+}
+.tableParam #styled-table tbody tr .editBtn, .tableCuadre #styled-table tbody tr .editBtn, .previewTable #styled-table tbody tr .editBtn, .tablaUser #styled-table tbody tr .editBtn, .tableContable #styled-table tbody tr .editBtn, .tableContableFiltrada #styled-table tbody tr .editBtn, .tablaGrande #styled-table tbody tr .editBtn, .tablaClientes #styled-table tbody tr .editBtn {
+  color: #00558C;
+}
+.tableParam #styled-table tbody tr .inficon, .tableCuadre #styled-table tbody tr .inficon, .previewTable #styled-table tbody tr .inficon, .tablaUser #styled-table tbody tr .inficon, .tableContable #styled-table tbody tr .inficon, .tableContableFiltrada #styled-table tbody tr .inficon, .tablaGrande #styled-table tbody tr .inficon, .tablaClientes #styled-table tbody tr .inficon {
+  font-size: 1.1rem;
+  color: #00558C;
+}
+.tableParam #styled-table tbody tr .ninficon, .tableCuadre #styled-table tbody tr .ninficon, .previewTable #styled-table tbody tr .ninficon, .tablaUser #styled-table tbody tr .ninficon, .tableContable #styled-table tbody tr .ninficon, .tableContableFiltrada #styled-table tbody tr .ninficon, .tablaGrande #styled-table tbody tr .ninficon, .tablaClientes #styled-table tbody tr .ninficon {
+  font-size: 1.1rem;
+  color: gray;
+}
+.tableParam #styled-table tbody tr .success, .tableCuadre #styled-table tbody tr .success, .previewTable #styled-table tbody tr .success, .tablaUser #styled-table tbody tr .success, .tableContable #styled-table tbody tr .success, .tableContableFiltrada #styled-table tbody tr .success, .tablaGrande #styled-table tbody tr .success, .tablaClientes #styled-table tbody tr .success {
+  color: green;
+}
+.tableParam #styled-table tbody tr .fail, .tableCuadre #styled-table tbody tr .fail, .previewTable #styled-table tbody tr .fail, .tablaUser #styled-table tbody tr .fail, .tableContable #styled-table tbody tr .fail, .tableContableFiltrada #styled-table tbody tr .fail, .tablaGrande #styled-table tbody tr .fail, .tablaClientes #styled-table tbody tr .fail {
+  color: red;
+}
+
+.tablaClientes {
+  max-height: 250px;
+}
+
+.tablaGrande {
+  max-height: 600px;
+}
+
+.tableContable, .tableContableFiltrada {
+  max-height: 430px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.tableContableFiltrada {
+  max-height: 450px;
+  width: 1900px;
+}
+
+.tablaUser {
+  max-height: 300px;
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.previewTable {
+  height: 350px;
+  max-width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.tableCuadre {
+  max-height: 400px;
+}
+
+.page-item.active a {
+  background-color: #00558C;
+  color: #ffffff;
+}
+
+.page-item .page-link {
+  color: #00558C;
+  font-size: 13px;
+  padding: 2px 6px;
+}
+
+/*# sourceMappingURL=tabla-registros.css.map */

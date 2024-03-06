@@ -1,0 +1,103 @@
+@import 'colors';
+@import 'parameters';
+
+/*Navbar CSS*/
+/*#################################*/
+.navbar {
+    font-weight: 700;
+    font-size: $navbar-font-size;
+    background-color: $bg-color;
+    max-height: 50px;
+    box-shadow: $default-box-shadow;
+    transition: 0.2s;
+    
+    .navbar-brand {
+        font-weight: 700;
+        color: $text-color;
+        font-size: $navbar-font-size+5px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .nav-item {
+        a {
+            color: $text-color;
+    
+            &:hover {
+                color: darken($color: $text-color, $amount: 25%);
+                transition: 0.2s;
+            }
+        }
+        
+        @include multi-level-dropdowns;
+
+        .dropdown-menu {
+            background-color: $bg-color;
+            color: $text-color;
+            border: none;
+            font-weight: 700;
+            font-size: $navbar-font-size;
+            text-align: center;
+
+            #opcionMenu a {
+                text-decoration: none;
+
+                &:hover {
+                    background-color: lighten($color: $bg-color, $amount: 10%);
+                    color: darken($color: $text-color, $amount: 25%);
+                    transition: 0.2s;
+                }
+            }
+        }
+
+        #menuDesplegable {
+            border: 1px solid $text-color;
+            border-radius: 5px;
+            padding: 0.5rem 1rem;
+        }
+    }
+    
+    #userBanner, #logout {
+        color: aliceblue;
+        text-decoration: none;
+    
+        &:hover {
+            color: $hover-color;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+    }
+
+    #logout:hover {
+        color: $logout-color;
+        transition: 0.2s;
+    }
+}
+
+
+
+/*Footer CSS*/
+/*#################################*/
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: $bg-color;
+    color: $text-color;
+    text-align: center;
+    max-height: 20px;
+    
+    span {
+        color: $text-color;
+        font-size: 12px;
+        transition-duration: 0.2s;
+        height: 100%;
+        
+        &:hover {
+            color: $hover-color;
+            cursor: pointer;
+        }
+    }
+}

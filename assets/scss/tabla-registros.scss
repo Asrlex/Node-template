@@ -1,0 +1,170 @@
+@import 'parameters';
+
+.tableParam {
+    overflow: auto;
+    max-height: 160px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    margin-bottom: 10px;
+    @include scrollbar();
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+    #styled-table {
+        border-collapse: collapse;
+        width: 100%;
+        font-size: 20px;
+        
+
+        thead {
+            tr {
+                position: sticky;
+                top: 0;
+                z-index: 1;
+                border-collapse: collapse;
+                background-color: $table-global-color;
+                color: $table-header-text-color;
+                font-size: $table-header-font-size;
+                box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.75);
+                
+                th {
+                    cursor: pointer;
+
+                    &:nth-of-type(1) {
+                        border-radius: 8px 0 0 0;
+                    }
+
+                    &:nth-last-of-type(1) {
+                        border-radius: 0 8px 0 0;
+                    }
+                }
+            }
+        }
+
+        th,
+        td {
+            padding: 5px 5px;
+            text-align: center;
+        }
+
+        a {
+            margin: -15px 0;
+            padding: 0;
+        }
+
+        tbody {
+            background-color: $table-row-color;
+            font-size: $table-body-font-size;
+
+            tr {
+                height: 20px;
+                line-height: 20px;
+
+
+                &:nth-of-type(even) {
+                    background-color: darken($table-row-color, 10%);
+                }
+
+                &:last-of-type {
+                    border-bottom: 2px solid $table-global-color;
+                }
+
+                &.active-row {
+                    font-weight: bold;
+                    color: $table-global-color;
+                }
+
+                &:hover {
+                    background-color: $table-hover-color;
+                    cursor: default;
+                    transition: .2s;
+                }
+
+                .editBtn {
+                    color: $table-global-color;
+                }
+
+                .inficon {
+                    font-size: 1.1rem;
+                    color: $table-global-color;
+                }
+
+                .ninficon {
+                    font-size: 1.1rem;
+                    color: gray
+                }
+
+                .success {
+                    color: green;
+                }
+
+                .fail {
+                    color: red;
+                }
+            }
+        }
+    }
+}
+
+.tablaClientes {
+    @extend .tableParam;
+    max-height: 250px;
+}
+
+.tablaGrande {
+    @extend .tableParam;
+    max-height: 600px;
+}
+
+.tableContable {
+    @extend .tableParam;
+    max-height: 430px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.tableContableFiltrada {
+    @extend .tableContable;
+    max-height: 450px;
+    width: 1900px;
+}
+
+.tablaUser {
+    @extend .tableParam;
+    max-height: 300px;
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.previewTable {
+    @extend .tableParam;
+    height: 350px;
+    max-width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.tableCuadre {
+    @extend .tableParam;
+    max-height: 400px;
+}
+
+.page-item.active {
+    a {
+        background-color: $bg-color;
+        color: #ffffff;
+    }
+}
+
+.page-item {
+    .page-link {
+        color: $bg-color;
+        font-size: $table-header-font-size;
+        padding: 2px 6px;
+    }
+}

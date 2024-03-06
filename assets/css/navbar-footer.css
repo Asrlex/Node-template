@@ -1,0 +1,140 @@
+.hover-button {
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgb(214, 214, 231) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: rgb(144, 134, 224);
+  cursor: pointer;
+  display: inline-flex;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+}
+.hover-button:hover, .hover-button:focus, .hover-button:focus:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgb(214, 214, 231) 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+.hover-button:focus {
+  outline: none;
+}
+.hover-button:active {
+  box-shadow: rgb(214, 214, 231) 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+/*Navbar CSS*/
+/*#################################*/
+.navbar {
+  font-weight: 700;
+  font-size: 14px;
+  background-color: #00558C;
+  max-height: 50px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.2s;
+}
+.navbar .navbar-brand {
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 19px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.navbar .nav-item a {
+  color: #ffffff;
+}
+.navbar .nav-item a:hover {
+  color: #bfbfbf;
+  transition: 0.2s;
+}
+.navbar .nav-item .dropdown-menu li {
+  position: relative;
+}
+.navbar .nav-item .dropdown-menu .dropdown-submenu {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: -7px;
+}
+.navbar .nav-item .dropdown-menu .dropdown-submenu-left {
+  right: 100%;
+  left: auto;
+}
+.navbar .nav-item .dropdown-menu > li:hover > .dropdown-submenu {
+  display: block;
+}
+.navbar .nav-item .dropdown-menu {
+  background-color: #00558C;
+  color: #ffffff;
+  border: none;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+}
+.navbar .nav-item .dropdown-menu #opcionMenu a {
+  text-decoration: none;
+}
+.navbar .nav-item .dropdown-menu #opcionMenu a:hover {
+  background-color: #0074bf;
+  color: #bfbfbf;
+  transition: 0.2s;
+}
+.navbar .nav-item #menuDesplegable {
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+}
+.navbar #userBanner, .navbar #logout {
+  color: aliceblue;
+  text-decoration: none;
+}
+.navbar #userBanner:hover, .navbar #logout:hover {
+  color: #00ff00;
+  text-decoration: none;
+  transition: 0.2s;
+}
+.navbar #logout:hover {
+  color: #d81e1e;
+  transition: 0.2s;
+}
+
+/*Footer CSS*/
+/*#################################*/
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #00558C;
+  color: #ffffff;
+  text-align: center;
+  max-height: 20px;
+}
+.footer span {
+  color: #ffffff;
+  font-size: 12px;
+  transition-duration: 0.2s;
+  height: 100%;
+}
+.footer span:hover {
+  color: #00ff00;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=navbar-footer.css.map */

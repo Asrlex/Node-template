@@ -1,0 +1,98 @@
+<nav class="navbar navbar-expand-md fixed-top">
+    <a class="navbar-brand navbar-logo mx-4" href="/gestion/main">SVF</a>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto">
+            <!-- CONTROL CONTABLE -->
+            <li class="nav-item">
+                <a class="nav-link pe-4" href="/gestion/contable" rel="noopener">
+                    <i class="fas fa-calculator me-1"></i>
+                    Control Contable
+                </a>
+            </li>
+            <!-- CUADRE -->
+            <li class="nav-item">
+                <a class="nav-link pe-4" href="/gestion/cuadre" rel="noopener">
+                    <i class="fas fa-balance-scale me-1"></i>
+                    Cuadre
+                </a>
+            </li>
+            <!-- INFORMES -->
+            <li class="nav-item">
+                <a class="nav-link pe-4" href="/gestion/informes" rel="noopener">
+                    <i class="fas fa-sheet-plastic me-1"></i>
+                    Informes
+                </a>
+            </li>
+            <!-- DROPDOWN AJUSTES MULTINIVEL -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle pe-4" href="#" rel="noopener" data-bs-toggle="dropdown" rel="noopener">
+                    <i class="fas fa-wrench me-1"></i>
+                    Ajustes
+                </a>
+                <ul class="dropdown-menu" id="menuDesplegable">
+                    <li id="opcionMenu">
+                        <a href="/gestion/usuarios" class="dropdown-item">
+                            <i class="fas fa-user me-1"></i>
+                            Usuarios
+                        </a>
+                    </li>
+                    <li class="dropdown-separator"></li>
+                    <li id="opcionMenu">
+                        <a class="dropdown-item" href="#" role="button" rel="noopener">
+                            <i class="fas fa-wrench me-1"></i>
+                            Parámetros &raquo;
+                        </a>
+                        <ul class="dropdown-menu dropdown-submenu" id="menuDesplegable">
+                            <li id="opcionMenu">
+                                <a href="/gestion/ajustes?type=param" class="dropdown-item">
+                                    <i class="fas fa-wrench me-1"></i>
+                                    Paramétricas
+                                </a>
+                            </li>
+                            <li class="dropdown-separator"></li>
+                            <li id="opcionMenu">
+                                <a href="/gestion/ajustes?type=cicas" class="dropdown-item">
+                                    <i class="fas fa-table me-1"></i>
+                                    CICAs
+                                </a>
+                            </li>
+                            <li id="opcionMenu">
+                                <a href="/gestion/ajustes?type=searchcicas" class="dropdown-item">
+                                    <i class="fas fa-magnifying-glass me-1"></i>
+                                    Buscador CICAs
+                                </a>
+                            </li>
+                            <li class="dropdown-separator"></li>
+                            <li id="opcionMenu">
+                                <a href="/gestion/ajustes?type=clientes" class="dropdown-item">
+                                    <i class="fas fa-table me-1"></i>
+                                    Clientes
+                                </a>
+                            </li>
+                            <li id="opcionMenu">
+                                <a href="/gestion/ajustes?type=searchclientes" class="dropdown-item">
+                                    <i class="fas fa-magnifying-glass me-1"></i>
+                                    Buscador Clientes
+                                </a>
+                            </li>
+                            <li id="opcionMenu">
+                                <a href="/gestion/ajustes?type=extraer" class="dropdown-item">
+                                <i class="fas fa-download"></i>
+                                    Extracción
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class=" p-1 pe-2"></div>
+    <div class=" p-1 pe-2 nav-link" id="userBanner"><%= usuario %></div>
+    <div class=" p-1 pe-4 nav-link">
+        <a href="/gestion/usuarios/logout" id="logout">
+            <img class="me-1" src="/logout.svg" alt="" style="height: 20px;">
+            Cerrar sesión
+        </a>    
+    </div>
+</nav>

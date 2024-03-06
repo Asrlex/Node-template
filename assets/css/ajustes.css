@@ -1,0 +1,176 @@
+.hover-button {
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgb(214, 214, 231) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: rgb(144, 134, 224);
+  cursor: pointer;
+  display: inline-flex;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+}
+.hover-button:hover, .hover-button:focus, .hover-button:focus:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgb(214, 214, 231) 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+.hover-button:focus {
+  outline: none;
+}
+.hover-button:active {
+  box-shadow: rgb(214, 214, 231) 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.tituloTabla {
+  margin-bottom: -20px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #00558C;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 2px #ffffff;
+  display: inline-block;
+}
+.tituloTabla button {
+  font-size: 10px;
+  padding: 2px 6px;
+  margin: 0px 15px 5px 10px;
+  background-color: #00558C;
+  color: #ffffff;
+}
+.tituloTabla button:hover {
+  background-color: #ffffff;
+  color: #00558C;
+  border: 1px solid #00558C;
+}
+.tituloTabla button:focus {
+  outline: none;
+}
+
+.tabselectorbutton {
+  font-size: 1.1em;
+  font-weight: 500;
+  color: #00558C;
+  background-color: #ffffff;
+  border: 1px solid #00558C;
+  border-radius: 8px 8px 0 0;
+  padding: 5px 10px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.tabselectorbutton:hover {
+  background-color: #0068ab;
+  color: #ffffff;
+}
+.tabselectorbutton:focus {
+  outline: none;
+}
+
+.formextract {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 #00558C;
+  color: #00558C;
+}
+.formextract h1 {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.formextract .input-group {
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.formextract .input-group label {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.formextract button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #00558C;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.formextract button:hover {
+  color: #00558C;
+  background-color: #ffffff;
+}
+.formextract button:focus {
+  color: #ffffff;
+  background-color: #0074bf;
+}
+
+.loader {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  background: linear-gradient(0deg, white 33%, #00558C 100%);
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #f2f2f2;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=ajustes.css.map */

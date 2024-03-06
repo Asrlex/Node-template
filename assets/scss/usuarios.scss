@@ -1,0 +1,29 @@
+@import 'parameters';
+
+h2 {
+    margin-top: 50px;
+}
+
+.botones {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+
+    button {
+        font-size: $table-title-font-size;
+        padding: 2px 6px;
+        margin: 0px 15px 5px 10px;
+        background-color: $table-global-color;
+        color: $table-header-text-color;
+
+        &:hover {
+            background-color: $table-header-text-color;
+            color: $table-global-color;
+            border: 1px solid $table-global-color;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

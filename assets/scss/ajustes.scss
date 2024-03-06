@@ -1,0 +1,107 @@
+@import 'parameters';
+
+.tituloTabla {
+    margin-bottom: -20px;
+    font-size: $table-title-font-size;
+    font-weight: bold;
+    color: $table-global-color;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px $table-header-text-color;
+    display: inline-block;
+
+    button {
+        font-size: 10px;
+        padding: 2px 6px;
+        margin: 0px 15px 5px 10px;
+        background-color: $table-global-color;
+        color: $table-header-text-color;
+
+        &:hover {
+            background-color: $table-header-text-color;
+            color: $table-global-color;
+            border: 1px solid $table-global-color;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.tabselectorbutton {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: $table-global-color;
+    background-color: $table-header-text-color;
+    border: 1px solid $table-global-color;
+    border-radius: 8px 8px 0 0;
+    padding: 5px 10px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: .2s;
+
+    &:hover {
+        background-color: lighten($color: $table-global-color, $amount: 6);
+        color: $table-header-text-color;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+}
+
+.formextract {
+    // center the form and its label in the page
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: $table-header-text-color;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 $table-global-color;
+    color: $table-global-color;
+
+    h1 {
+        font-size: 1.5em;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .input-group {
+        width: 100%;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        label {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+    }
+
+    // center button in a column
+    button {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+        
+        @include genericButton;
+    }
+}
+
+.loader {
+    @include loader;
+}

@@ -1,0 +1,258 @@
+@import 'colors';
+@import 'custom-button';
+
+$navbar-font-size: 14px;
+$form-font-size: 14px;
+$title-font-size: 30px;
+$table-header-font-size: 13px;
+$table-body-font-size: 11px;
+$table-title-font-size: 22px;
+
+// OBJETOS
+$default-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+
+@mixin halo ($color) {
+    border: 2px solid $color;
+    box-shadow: 0 0 5px $color;
+}
+
+@mixin green-glow {
+    border: 2px solid $hover-color;
+    box-shadow: 0 0 5px $hover-color;
+}
+
+@mixin default-button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+@mixin titulo {
+    font-size: 16px;
+    font-weight: bold;
+    color: $form-text-color;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+@mixin centered-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+@mixin scrollbar() {
+    &::-webkit-scrollbar {
+        width: 10px;
+        height: 18px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        height: 3px;
+        border: 1px solid transparent;
+        border-radius: 8px;
+        background-clip: padding-box;
+        background-color: lighten($color: $bg-color, $amount: 5);
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: lighten($color: $bg-color, $amount: 15);
+    }
+
+    &::-webkit-scrollbar-button {
+        width: 0;
+        height: 0;
+        display: none;
+    }
+
+    &::-webkit-scrollbar-corner {
+        background-color: transparent;
+    }
+}
+
+@mixin genericButton {
+    border-radius: 5px;
+    background-color: $bg-color;
+    color: $text-color;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        color: $bg-color;
+        background-color: $text-color;
+    }
+
+    &:focus {
+        color: $text-color;
+        background-color: lighten($color: $bg-color, $amount: 10);
+    }
+}
+
+@mixin columns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin multi-level-dropdowns {
+    .dropdown-menu li {
+        position: relative;
+    }
+
+    .dropdown-menu .dropdown-submenu {
+        display: none;
+        position: absolute;
+        left: 100%;
+        top: -7px;
+    }
+
+    .dropdown-menu .dropdown-submenu-left {
+        right: 100%;
+        left: auto;
+    }
+
+    .dropdown-menu>li:hover>.dropdown-submenu {
+        display: block;
+    }
+}
+
+@mixin uploadDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    color: $bg-color;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid $bg-color;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    height: 80%;
+
+    form {
+        width: 100%;
+    }
+
+    .col,
+    .col-2,
+    .col-3 {
+        @include columns;
+    }
+
+    button {
+        @include genericButton;
+    }
+
+    .filelabel {
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        border: 2px solid $bg-color;
+        border-radius: 5px;
+        padding: 0.5rem 1rem;
+
+        &:hover {
+            color: $bg-color;
+            background-color: $text-color;
+        }
+    }
+}
+
+@mixin filtros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    color: $bg-color;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid $bg-color;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    height: 80%;
+    width: 90%;
+    margin-left: 5%;
+
+    button {
+        @include genericButton;
+    }
+
+    .col,
+    .col-2,
+    .col-3 {
+        margin: 0 1rem;
+    }
+
+    .selected-input {
+        @include green-glow;
+    }
+}
+
+@mixin etiquetas-filtros {
+
+    .cuentaEquipos,
+    .labelFiltros {
+        font-size: 1rem;
+        font-weight: 600;
+        color: $bg-color;
+    }
+
+    .filtrosActivos {
+        button {
+            margin: 0 0.6rem;
+            color: $bg-color;
+            border-color: $bg-color;
+
+            &:hover {
+                color: $text-color;
+                background-color: $bg-color;
+            }
+        }
+    }
+}
+
+@mixin loader{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    background: linear-gradient(0deg, white 33%, $bg-color 100%);
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    
+    &::after {
+        content: '';
+        box-sizing: border-box;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: darken($color: #ffffff, $amount: 5);
+    }
+    
+    @keyframes rotation {
+        0% {
+            transform: rotate(0deg)
+        }
+        
+        100% {
+            transform: rotate(360deg)
+        }
+    }
+}

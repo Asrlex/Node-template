@@ -1,0 +1,32 @@
+@import 'parameters';
+
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: darken($color: #ffffff, $amount: 5);
+}
+
+#logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+}
+
+h3 {
+    margin-bottom: 10px;
+    text-align: center;
+    color: $table-global-color;
+    font-weight: 700;
+    font-size: $title-font-size;
+}
+
+.titulo {
+    @extend h3;
+    font-size: $title-font-size+15px;
+}

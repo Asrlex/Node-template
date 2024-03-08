@@ -1,7 +1,7 @@
 const sqlite3 = require('sqlite3').verbose();
 const dotenv = require("dotenv");
 dotenv.config();
-const dbsrc = process.env.dbsrc;
+const dbsrc = process.env.DB_SRC;
 
 let db = new sqlite3.Database(dbsrc, (err) => {
     if (err) {

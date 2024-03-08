@@ -11,11 +11,24 @@ const helmet = require("helmet");
 const { verifyLogin } = require("./middleware.js");
 const Logger = require("./utils/Logger.js");
 const usuarios = require("./routes/usuarios")
-// const entidad = require("./routes/entidad")
 const path = require("path");
 const app = express();
 const secret = process.env.secret;
 const { errorLogger, errorHandler } = require("./utils/ErrorHandler.js");
+const root = "/gestion";
+
+// DB
+Logger.log(`Connecting to ${process.env.DB} DB`);
+let db;
+if (process.env.DB == "sqlite") {
+    db = require("./db/database_sqlite.js");
+} else if (process.env.DB == "mssql") {
+    db = require("./db/database_mssql.js");
+} else {
+    Logger.error("No database selected");
+    process.exit(1);
+}
+module.exports.db = db;
 
 app.use(compression());
 app.use(helmet());
@@ -111,7 +124,7 @@ app.use((req, res, next) => {
 })
 
 // Routes
-app.use("/gestion/usuarios", usuarios);
+app.use(`${root}/usuarios`, usuarios);
 
 // Rate limiters
 const informesLimiter = rateLimit({
@@ -120,7 +133,7 @@ const informesLimiter = rateLimit({
     standardHeaders: true,
     legacyHeaders: false
 });
-app.use('/gestion/informes', informesLimiter);
+app.use(`${root}/usuarios`, informesLimiter);
 
 // Error handling
 app.use(errorLogger);
@@ -134,15 +147,15 @@ app.listen(PORT, () => {
 });
 
 // Redirects
-app.get(["/", "/gestion"], (req, res) => {
+app.get(["/", root], (req, res) => {
     if (req.session.loggedin) {
-        res.redirect("/gestion/main");
+        res.redirect(`${root}/main`);
     } else {
-        res.redirect("/gestion/usuarios/login");
+        res.redirect(`${root}/usuarios/login`);
     }
 })
 
-app.get("/gestion/main", verifyLogin, (req, res) => {
+app.get(`${root}/main`, verifyLogin, (req, res) => {
     res.render("index.ejs");
 });
 

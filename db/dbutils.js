@@ -1,4 +1,4 @@
-const db = require("./database.js");
+const db = require('../server.js').db;
 
 module.exports.ejecutarQueryInsertMultiple = async (query, coleccion, plhol) => {
     let placeholders = coleccion.map(() => plhol).join(", ");

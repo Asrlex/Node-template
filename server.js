@@ -22,8 +22,25 @@ Logger.log(`Connecting to ${process.env.DB} DB`);
 let db;
 if (process.env.DB == "sqlite") {
     db = require("./db/database_sqlite.js");
+} else if (process.env.DB == "mariadb") {
+    db = require("./db/database_mariadb.js");
+    db.connect()
+        .then(() => {
+            Logger.log("Connected to MariaDB");
+        })
+        .catch((err) => {
+            Logger.error("Database Connection Failed! Bad Config: ", err);
+            process.exit(1);
+        });
 } else if (process.env.DB == "mssql") {
-    db = require("./db/database_mssql.js");
+    db = require("./db/database_mssql.js").poolPromise;
+    db.then(() => {
+        Logger.log("Connected to MSSQL");
+    })
+        .catch((err) => {
+            Logger.error("Database Connection Failed! Bad Config: ", err);
+            process.exit(1);
+        });
 } else {
     Logger.error("No database selected");
     process.exit(1);

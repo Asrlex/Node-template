@@ -20,8 +20,9 @@
       - Modificar el script de ejecución para no ejecutar concurrentemente traductor y servidor.
 - **db**
   - Contiene los ficheros de gestión de la base de datos.
-    - Inicialización de base sqlite3 para desarrollo.
-    - Inicialización de base mssql para producción.
+    - Inicialización de base de datos sqlite3 para desarrollo.
+    - Inicialización de base de datos mssql para producción.
+    - Inicialización de base de datos mariadb para producción.
     - Testeo de base de datos.
       - Conexión
       - Creación de tablas
@@ -66,6 +67,20 @@ git commit -m "Initial commit"
 git branch -M main
 git remote add origin <url del repositorio>
 git push -u origin main
+```
+
+Una vez creado el repositorio, se deben instalar las dependencias:
+
+```bash
+npm install
+```
+
+Si se quiere migrar a yarn:
+
+```bash
+corepack enable
+yarn set version berry
+yarn install
 ```
 
 ---

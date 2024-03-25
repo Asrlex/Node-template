@@ -11,4 +11,6 @@
 
 ## Seguridad
 
+- [ ] Add JWT login
+
 ## Bugs

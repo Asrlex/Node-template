@@ -6,6 +6,7 @@ const ejsMate = require("ejs-mate");
 const session = require('cookie-session');
 const methodOverride = require("method-override");
 const compression = require("compression");
+const morgan = require("morgan");
 const rateLimit = require('express-rate-limit');
 const helmet = require("helmet");
 const { verifyLogin } = require("./middleware.js");
@@ -144,13 +145,16 @@ app.use((req, res, next) => {
 app.use(`${root}/usuarios`, usuarios);
 
 // Rate limiters
-const informesLimiter = rateLimit({
+const limiter = rateLimit({
     windowMs: 2 * 60 * 1000,
     max: 4,
     standardHeaders: true,
     legacyHeaders: false
 });
-app.use(`${root}/usuarios`, informesLimiter);
+app.use(`${root}/`, limiter);
+
+// Logging
+app.use(morgan('tiny'));
 
 // Error handling
 app.use(errorLogger);
